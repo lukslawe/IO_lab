@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tramwaj\\source\\repos\\IO_laboratoria\\ŁSIOlab1\\ankietaGUI\\ankietaGUI\\ankietaGUI.csproj": {}
+    "C:\\Users\\Tramwaj\\source\\repos\\IO_lab\\zad1\\ankietaGUI\\ankietaGUI\\ankietaGUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tramwaj\\source\\repos\\IO_laboratoria\\ŁSIOlab1\\ankietaGUI\\ankietaGUI\\ankietaGUI.csproj": {
+    "C:\\Users\\Tramwaj\\source\\repos\\IO_lab\\zad1\\ankietaGUI\\ankietaGUI\\ankietaGUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tramwaj\\source\\repos\\IO_laboratoria\\ŁSIOlab1\\ankietaGUI\\ankietaGUI\\ankietaGUI.csproj",
+        "projectUniqueName": "C:\\Users\\Tramwaj\\source\\repos\\IO_lab\\zad1\\ankietaGUI\\ankietaGUI\\ankietaGUI.csproj",
         "projectName": "ankietaGUI",
-        "projectPath": "C:\\Users\\Tramwaj\\source\\repos\\IO_laboratoria\\ŁSIOlab1\\ankietaGUI\\ankietaGUI\\ankietaGUI.csproj",
+        "projectPath": "C:\\Users\\Tramwaj\\source\\repos\\IO_lab\\zad1\\ankietaGUI\\ankietaGUI\\ankietaGUI.csproj",
         "packagesPath": "C:\\Users\\Tramwaj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tramwaj\\source\\repos\\IO_laboratoria\\ŁSIOlab1\\ankietaGUI\\ankietaGUI\\obj\\",
+        "outputPath": "C:\\Users\\Tramwaj\\source\\repos\\IO_lab\\zad1\\ankietaGUI\\ankietaGUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tramwaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
