@@ -26,17 +26,25 @@ namespace ankietaGUI
         }
         private void Form1_Click(object sender, EventArgs e)
         {
-            this.Text = "ankieta";
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("I am THE BUTTON");
+            //MessageBox.Show("I am THE BUTTON");
+            bool isSc1Visible = splitContainer1.Panel1Collapsed;
+            if (isSc1Visible){
+                tSB1.Image = Properties.Resources.unwrappedArrow;
+                splitContainer1.Panel1Collapsed = false;
+            }
+            else{
+                tSB1.Image = Properties.Resources.wrappedArrow;
+                splitContainer1.Panel1Collapsed = true;
+            }
         }
 
         private void zkonczToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,7 +61,7 @@ namespace ankietaGUI
         {
 
         }
-
+     
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -65,6 +73,31 @@ namespace ankietaGUI
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbAnkiety_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
