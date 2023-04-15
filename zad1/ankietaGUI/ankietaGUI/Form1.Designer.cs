@@ -43,10 +43,13 @@ namespace ankietaGUI
             this.formatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.widokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wyświetlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informacjeOProgramieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tSB1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lbAnkiety = new System.Windows.Forms.ListBox();
             this.tc1 = new System.Windows.Forms.TabControl();
@@ -143,16 +146,34 @@ namespace ankietaGUI
             // 
             // pomocToolStripMenuItem
             // 
+            this.pomocToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.wyświetlToolStripMenuItem,
+            this.informacjeOProgramieToolStripMenuItem});
             this.pomocToolStripMenuItem.Name = "pomocToolStripMenuItem";
             this.pomocToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.pomocToolStripMenuItem.Text = "Pomoc";
+            // 
+            // wyświetlToolStripMenuItem
+            // 
+            this.wyświetlToolStripMenuItem.Name = "wyświetlToolStripMenuItem";
+            this.wyświetlToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.wyświetlToolStripMenuItem.Text = "Wyświetl Pomoc";
+            this.wyświetlToolStripMenuItem.Click += new System.EventHandler(this.wyświetlToolStripMenuItem_Click);
+            // 
+            // informacjeOProgramieToolStripMenuItem
+            // 
+            this.informacjeOProgramieToolStripMenuItem.Name = "informacjeOProgramieToolStripMenuItem";
+            this.informacjeOProgramieToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.informacjeOProgramieToolStripMenuItem.Text = "Informacje o programie";
+            this.informacjeOProgramieToolStripMenuItem.Click += new System.EventHandler(this.informacjeOProgramieToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tSB1,
             this.toolStripButton1,
-            this.toolStripButton2});
+            this.toolStripButton2,
+            this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(821, 25);
@@ -167,7 +188,7 @@ namespace ankietaGUI
             this.tSB1.Margin = new System.Windows.Forms.Padding(3, 1, 0, 2);
             this.tSB1.Name = "tSB1";
             this.tSB1.Size = new System.Drawing.Size(23, 22);
-            this.tSB1.Text = "toolStripButton1";
+            this.tSB1.Text = "Schowaj/Pokaż";
             this.tSB1.Click += new System.EventHandler(this.button1_Click);
             // 
             // toolStripButton1
@@ -178,7 +199,7 @@ namespace ankietaGUI
             this.toolStripButton1.Margin = new System.Windows.Forms.Padding(3, 1, 0, 2);
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Text = "Importuj";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton2
@@ -189,11 +210,22 @@ namespace ankietaGUI
             this.toolStripButton2.Margin = new System.Windows.Forms.Padding(3, 1, 0, 2);
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Text = "Eksportuj";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = global::ankietaGUI.Properties.Resources.sendBellot;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Margin = new System.Windows.Forms.Padding(3, 1, 0, 2);
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "Wysyłanie ankiety";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Cursor = System.Windows.Forms.Cursors.VSplit;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 49);
             this.splitContainer1.Name = "splitContainer1";
@@ -211,6 +243,7 @@ namespace ankietaGUI
             // 
             // lbAnkiety
             // 
+            this.lbAnkiety.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbAnkiety.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbAnkiety.FormattingEnabled = true;
             this.lbAnkiety.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -230,6 +263,7 @@ namespace ankietaGUI
             this.tc1.Controls.Add(this.tabPage1);
             this.tc1.Controls.Add(this.tabPage2);
             this.tc1.Controls.Add(this.tabPage3);
+            this.tc1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tc1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tc1.ImageList = this.imageList1;
             this.tc1.Location = new System.Drawing.Point(0, 0);
@@ -263,7 +297,7 @@ namespace ankietaGUI
             // 
             // tb6
             // 
-            this.tb6.Location = new System.Drawing.Point(461, 130);
+            this.tb6.Location = new System.Drawing.Point(450, 124);
             this.tb6.Name = "tb6";
             this.tb6.Size = new System.Drawing.Size(106, 23);
             this.tb6.TabIndex = 14;
@@ -271,7 +305,7 @@ namespace ankietaGUI
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(354, 133);
+            this.label8.Location = new System.Drawing.Point(343, 127);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 15);
             this.label8.TabIndex = 13;
@@ -279,7 +313,7 @@ namespace ankietaGUI
             // 
             // tb5
             // 
-            this.tb5.Location = new System.Drawing.Point(160, 130);
+            this.tb5.Location = new System.Drawing.Point(149, 124);
             this.tb5.Name = "tb5";
             this.tb5.Size = new System.Drawing.Size(176, 23);
             this.tb5.TabIndex = 12;
@@ -287,7 +321,7 @@ namespace ankietaGUI
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(107, 133);
+            this.label7.Location = new System.Drawing.Point(96, 127);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(33, 15);
             this.label7.TabIndex = 11;
@@ -295,14 +329,14 @@ namespace ankietaGUI
             // 
             // tb4
             // 
-            this.tb4.Location = new System.Drawing.Point(416, 173);
+            this.tb4.Location = new System.Drawing.Point(405, 167);
             this.tb4.Name = "tb4";
             this.tb4.Size = new System.Drawing.Size(151, 23);
             this.tb4.TabIndex = 10;
             // 
             // tb2
             // 
-            this.tb2.Location = new System.Drawing.Point(160, 173);
+            this.tb2.Location = new System.Drawing.Point(149, 167);
             this.tb2.Name = "tb2";
             this.tb2.Size = new System.Drawing.Size(151, 23);
             this.tb2.TabIndex = 8;
@@ -310,7 +344,7 @@ namespace ankietaGUI
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(366, 176);
+            this.label6.Location = new System.Drawing.Point(355, 170);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 15);
             this.label6.TabIndex = 7;
@@ -319,7 +353,7 @@ namespace ankietaGUI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(114, 176);
+            this.label4.Location = new System.Drawing.Point(103, 170);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(26, 15);
             this.label4.TabIndex = 5;
@@ -328,7 +362,7 @@ namespace ankietaGUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 51);
+            this.label3.Location = new System.Drawing.Point(47, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 15);
             this.label3.TabIndex = 4;
@@ -345,7 +379,7 @@ namespace ankietaGUI
             "Małopolskie",
             "Wielkopolskie",
             "Dolnośląskie"});
-            this.cb2.Location = new System.Drawing.Point(160, 48);
+            this.cb2.Location = new System.Drawing.Point(149, 42);
             this.cb2.Name = "cb2";
             this.cb2.Size = new System.Drawing.Size(407, 23);
             this.cb2.TabIndex = 3;
@@ -353,7 +387,7 @@ namespace ankietaGUI
             // 
             // tb1
             // 
-            this.tb1.Location = new System.Drawing.Point(160, 88);
+            this.tb1.Location = new System.Drawing.Point(149, 82);
             this.tb1.Name = "tb1";
             this.tb1.Size = new System.Drawing.Size(407, 23);
             this.tb1.TabIndex = 1;
@@ -361,7 +395,7 @@ namespace ankietaGUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(97, 91);
+            this.label1.Location = new System.Drawing.Point(86, 85);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 15);
             this.label1.TabIndex = 0;
@@ -459,14 +493,14 @@ namespace ankietaGUI
             // 
             // tb7
             // 
-            this.tb7.Location = new System.Drawing.Point(359, 59);
+            this.tb7.Location = new System.Drawing.Point(357, 62);
             this.tb7.Name = "tb7";
             this.tb7.Size = new System.Drawing.Size(187, 23);
             this.tb7.TabIndex = 10;
             // 
             // tb3
             // 
-            this.tb3.Location = new System.Drawing.Point(122, 59);
+            this.tb3.Location = new System.Drawing.Point(108, 62);
             this.tb3.Name = "tb3";
             this.tb3.Size = new System.Drawing.Size(187, 23);
             this.tb3.TabIndex = 9;
@@ -475,7 +509,7 @@ namespace ankietaGUI
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(389, 35);
+            this.label12.Location = new System.Drawing.Point(387, 38);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(131, 15);
             this.label12.TabIndex = 8;
@@ -484,7 +518,7 @@ namespace ankietaGUI
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(146, 35);
+            this.label11.Location = new System.Drawing.Point(132, 38);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(136, 15);
             this.label11.TabIndex = 7;
@@ -498,7 +532,7 @@ namespace ankietaGUI
             "Dostateczny",
             "Dobry",
             "Bardzo Dobry"});
-            this.cb4.Location = new System.Drawing.Point(315, 215);
+            this.cb4.Location = new System.Drawing.Point(317, 201);
             this.cb4.Name = "cb4";
             this.cb4.Size = new System.Drawing.Size(148, 23);
             this.cb4.TabIndex = 6;
@@ -511,7 +545,7 @@ namespace ankietaGUI
             "Dostateczny",
             "Dobry",
             "Bardzo Dobry"});
-            this.cb3.Location = new System.Drawing.Point(315, 177);
+            this.cb3.Location = new System.Drawing.Point(317, 163);
             this.cb3.Name = "cb3";
             this.cb3.Size = new System.Drawing.Size(148, 23);
             this.cb3.TabIndex = 5;
@@ -524,7 +558,7 @@ namespace ankietaGUI
             "Dostateczny",
             "Dobry",
             "Bardzo Dobry"});
-            this.cb1.Location = new System.Drawing.Point(315, 139);
+            this.cb1.Location = new System.Drawing.Point(317, 125);
             this.cb1.Name = "cb1";
             this.cb1.Size = new System.Drawing.Size(148, 23);
             this.cb1.TabIndex = 4;
@@ -532,7 +566,7 @@ namespace ankietaGUI
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(146, 218);
+            this.label10.Location = new System.Drawing.Point(148, 204);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 15);
             this.label10.TabIndex = 3;
@@ -541,7 +575,7 @@ namespace ankietaGUI
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(146, 180);
+            this.label9.Location = new System.Drawing.Point(148, 166);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 15);
             this.label9.TabIndex = 2;
@@ -550,7 +584,7 @@ namespace ankietaGUI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(146, 142);
+            this.label5.Location = new System.Drawing.Point(148, 128);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 15);
             this.label5.TabIndex = 1;
@@ -648,6 +682,9 @@ namespace ankietaGUI
         private System.Windows.Forms.TextBox tb3;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripMenuItem wyświetlToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem informacjeOProgramieToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
     }
 }
 

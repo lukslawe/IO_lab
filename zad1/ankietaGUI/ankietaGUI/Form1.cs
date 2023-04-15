@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,14 +18,25 @@ namespace ankietaGUI
         public FrmMain()
         {
             InitializeComponent();
-            loadBallots();
+            
         }
         private void loadBallots()
         {
-            for(int i=0; i< 10; i++)
+            //string[] files = System.IO.Directory.GetFiles("./","*.txt");
+            List<string> list = this.lbAnkiety.Items.OfType<string>().ToList();
+
+            string[] files = Directory.GetFiles(@"./", "*.txt")
+            .Select(Path.GetFileNameWithoutExtension)
+            .Select(p => p.Substring(0)).ToArray(); //per comment
+
+
+            IEnumerable<string> result = files.Except(list);
+
+            foreach (string file in result)
             {
-                lbAnkiety.Items.Add("Ankieta " + i.ToString());
+                lbAnkiety.Items.Add(Path.GetFileNameWithoutExtension(file));
             }
+            
         }
         private void Form1_Click(object sender, EventArgs e)
         {
@@ -81,7 +93,6 @@ namespace ankietaGUI
 
         private void lbAnkiety_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -114,12 +125,47 @@ namespace ankietaGUI
         }
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-
+            loadBallots();
         }
 
-        private void tb3_TextChanged(object sender, EventArgs e)
-        {
+        private void tb3_TextChanged(object sender, EventArgs e) { 
+            
+        }
 
+        private void wyświetlToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Okno pomocy programu");
+        }
+
+        private void informacjeOProgramieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Okno z informacjami o programie");
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Przycisk do eksport");
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            bool isEmpty = false;
+            if (this.tb1.Text == "" || this.tb2.Text == "" || this.tb3.Text == "" || this.tb4.Text == "" || this.tb5.Text == "" || this.tb6.Text == "" || this.tb7.Text == "")
+            {
+                isEmpty = true;
+            }
+            if (this.cb1.Text == "" || this.cb2.Text == "" || this.cb3.Text == "" || this.cb4.Text == "")
+            {
+                isEmpty = true;
+            }
+            if (isEmpty)
+            {
+                MessageBox.Show("Wypelnij wszsytkie pola w formularzu");
+            }
+            else
+            {
+                MessageBox.Show("Ankieta zostala wyslana");
+            }
         }
     }
     public class daneAnkiet {

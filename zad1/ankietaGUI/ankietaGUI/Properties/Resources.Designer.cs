@@ -63,6 +63,16 @@ namespace ankietaGUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sendBellot {
+            get {
+                object obj = ResourceManager.GetObject("sendBellot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Small_LayoutDD {
             get {
                 object obj = ResourceManager.GetObject("Small_LayoutDD", resourceCulture);
