@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "dsIbpMcGVIur6HD1B41kKbjEpy1vsjlSE5+EAp70mGzdanvKvEZFqbNK1OuyXdsG7UeuBqskXHxtQfKBpi6CXA==",
+  "dgSpecHash": "Ym4yVdhlbktNNJxjnJzRfZzBaFr/TXLKBYfd7CHKxTp+bAI+kfhatUETsNzRGvXXj0QxsF94sZgdLwos6IP6lA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Tramwaj\\source\\repos\\IO_lab\\zad1\\ankietaGUI\\ankietaGUI\\ankietaGUI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Tramwaj\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

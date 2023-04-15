@@ -36,3 +36,6 @@ C:\Users\Tramwaj\source\repos\IO_lab\zad1\ankietaGUI\ankietaGUI\obj\Debug\net5.0
 C:\Users\Tramwaj\source\repos\IO_lab\zad1\ankietaGUI\ankietaGUI\obj\Debug\net5.0-windows\ankietaGUI.pdb
 C:\Users\Tramwaj\source\repos\IO_lab\zad1\ankietaGUI\ankietaGUI\obj\Debug\net5.0-windows\ankietaGUI.genruntimeconfig.cache
 C:\Users\Tramwaj\source\repos\IO_lab\zad1\ankietaGUI\ankietaGUI\obj\Debug\net5.0-windows\ref\ankietaGUI.dll
+C:\Users\Tramwaj\source\repos\IO_lab\zad1\ankietaGUI\ankietaGUI\bin\Debug\net5.0-windows\ankietaGUI.dll.config
+C:\Users\Tramwaj\source\repos\IO_lab\zad1\ankietaGUI\ankietaGUI\bin\Debug\net5.0-windows\CsvHelper.dll
+C:\Users\Tramwaj\source\repos\IO_lab\zad1\ankietaGUI\ankietaGUI\obj\Debug\net5.0-windows\ankietaGUI.csproj.CopyComplete

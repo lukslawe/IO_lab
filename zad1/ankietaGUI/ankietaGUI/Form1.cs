@@ -7,9 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CsvHelper;
 
 namespace ankietaGUI
 {
+   
     public partial class FrmMain : Form
     {
         public FrmMain()
@@ -80,6 +82,12 @@ namespace ankietaGUI
         private void lbAnkiety_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            Utilities.ResetText();
+            int index = lbAnkiety.SelectedIndex;
+            if(index != -1)
+            {
+
+            }
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -101,5 +109,26 @@ namespace ankietaGUI
         {
 
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+        private void importData()
+        {
+
+        }
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+    public class daneAnkiet {
+        
     }
 }
