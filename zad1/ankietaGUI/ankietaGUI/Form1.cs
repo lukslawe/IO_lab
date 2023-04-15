@@ -82,12 +82,6 @@ namespace ankietaGUI
         private void lbAnkiety_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            Utilities.ResetText();
-            int index = lbAnkiety.SelectedIndex;
-            if(index != -1)
-            {
-
-            }
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
